@@ -2,6 +2,11 @@
 *.jpeg
 *.png
 
+# other files 
+*.swp
+*.un~
+*.py~
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
