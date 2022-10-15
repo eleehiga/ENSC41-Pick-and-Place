@@ -1,5 +1,5 @@
 import os
-os.environ["OPENCV_IO_MAX_IMAGE_PIXELS"] = pow(2,50).__str__()
+#os.environ["OPENCV_IO_MAX_IMAGE_PIXELS"] = pow(2,50).__str__()
 import cv2
 import numpy as np
 from PIL import Image
@@ -65,8 +65,8 @@ def compress_img(image_name, new_size_ratio=0.9, quality=90, width=None, height=
 
 #''' # the examples on stack overflow had a green background for their metallic object
 # read input
-def identify_alum(img):
-    img = cv2.imread('Straight_On.png', cv2.IMREAD_UNCHANGED)
+def identify_alum(filename):
+    img = cv2.imread(filename, cv2.IMREAD_UNCHANGED)
 
     # convert to hsv and get saturation channel
     sat = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)[:,:,1]
@@ -134,4 +134,10 @@ cv2.imshow('image', image)
 cv2.waitKey()
 '''
 
+def main():
+    #compress_img('Straight_On.png',0.9,90)
+    identify_alum('Straight_On1.jpeg')
+
+if __name__=='__main__':
+    main()
 

@@ -1,6 +1,7 @@
 # do not upload image files
 *.jpeg
 *.png
+*.jpg
 
 # other files 
 *.swp
